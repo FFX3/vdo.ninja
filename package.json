@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "http-server . -S",
-    "dev": "nodemon npm start"
+    "dev": "nodemon -e js,html,css,json npm start"
   },
   "devDependencies": {
     "http-server": "^14.1.1"
