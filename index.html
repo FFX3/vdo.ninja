@@ -329,6 +329,8 @@
 							</form>
 						</div>
 					</center>
+					<!-- TEMP for POC JUSTIN deleting the audio element crashes lib.js -->
+					<div style="display:none;">
 					<div id="audioMenu" class="form-group multiselect" alt="tip: Hold CTRL (command) to select Multiple" title="tip: Hold CTRL (command) to select Multiple">
 						<span class='gear_microphone hidden'>
 							<input type="checkbox" id='micStereoMonoInput' alt="Mono microphone audio"  onchange="toggleMonoStereoMic(this);">Mono
@@ -364,6 +366,7 @@
 							<p><span id="headphoneTipContext1"></span></p>
 						</div>
 					</div>
+					</div>
 					<br style="line-height: 0;" />
 					<div id="avatarDiv" class="hidden">
 						<div class="title">
@@ -380,38 +383,6 @@
 							  <input type="file" onchange="changeAvatarImage(event, this)" accept="image/*" style="position: fixed; top: -100em; margin-left:10px; border:1px solid #555;"> 
 							</label>
 						</div>
-					</div>
-					<br style="line-height: 0;" />
-					<div id="effectsDiv">
-						<div class="title">
-							<i class="las la-robot"></i><span data-translate="select-digital-effect"> Digital Video Effects </span>
-						</div>
-						<select id="effectSelector" alt="Digital video effect options"  onchange="effectsDynamicallyUpdate(event, this);">
-							<option value="0" data-translate="no-effects-applied">No effects applied</option>	
-							<option value="3" data-translate="blurred-background">Blurred background</option>
-							<option value="4" data-translate="digital-greenscreen">Digital greenscreen</option>	
-							<option value="5" data-translate="virtual-background">Virtual background</option>
-							<option value="6" data-translate="face-mesh" title="experimental">Face mesh (slow load) 👨‍🔬</option>
-							<option value="7" data-translate="digital-zoom">Digital zoom</option>
-							<option value="anon" data-translate="anonymous-mask" title="experimental">Anonymous mask 👨‍🔬</option>
-							<option value="dog" data-translate="dog-face" title="experimental">Dog ears and nose 👨‍🔬</option>
-							<option value="1" disabled title='Enable the Chrome experimental features flag to use: chrome://flags/#enable-experimental-web-platform-features' class='facetracker' data-translate="face-tracker">Face Tracker</option>
-						</select>
-						<span data-warnSimdNotice="true" style='display:none; font-size: 140%; margin-left:10px; vertical-align: middle; cursor:pointer' title="Improve performance and quality with this tip" onclick="smdInfo();">
-							<i class="las la-info-circle"></i>
-						</span>
-						<span data-effectsNotice="true" style='display:none; font-size: 140%; margin-left:10px; vertical-align: middle; cursor:pointer' title="Improve performance and quality with this tip" onclick="warnUser('Use a Chromium Based Browser');">
-							<i class="las la-info-circle"></i>
-						</span>
-						
-						<div id="selectImageTFLITE" style="display:none;margin-top:10px;">
-							
-						</div>
-						<div id="selectEffectAmount" style="display:none;margin-top:10px;">
-							<label for="selectEffectAmountInput" style="width: 113px;display: inline-block;">Effect Amount</label>
-							<input id="selectEffectAmountInput" style="display: inline-block;width: 350px; max-width: 60%;margin:6px 0;" name="selectEffectAmountInput" title="Adjust the amount of effect applied" type="range" oninput="changeEffectAmount(event, this)" onchange="changeEffectAmount(event, this)" min="0" step="1" max="20">
-						</div>
-						
 					</div>
 					<br style="line-height: 0;" />
 					<div id="addPasswordBasic">
